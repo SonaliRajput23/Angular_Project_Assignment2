@@ -1,0 +1,27 @@
+<div class="card mb-3 p-3 rounded shadow" *ngIf="charDetail; else loading">
+    <div class="row g-0">
+        <div class="col-md-3">
+            <img [src]="charDetail.image" class="img-fluid rounded-start">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h3 class="card-title">{{ charDetail.name }}</h3>
+                <div class="d-flex justify-content-between">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">ID: <small>{{ charDetail.id }}</small></li>
+                        <li class="list-group-item">Gender: <small>{{ charDetail.gender }}</small></li>
+                        <li class="list-group-item">Hair Color: <small>{{ charDetail.hairColor }}</small></li>
+                        <li class="list-group-item">Occupation: <small>{{ charDetail.occupation }}</small></li>
+                        <li class="list-group-item">Age: <small>{{ charDetail.age }}</small></li>
+                        <li class="list-group-item">First Episode: <small>{{ charDetail.firstEpisode }}</small></li>
+                        <li class="list-group-item">Voiced By: <small>{{ charDetail.voicedBy }}</small></li>
+                        <li class="list-group-item"><a [href]="charDetail.wikiUrl" target="_blank" class="btn btn-outline-primary btn-sm">More Details</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #loading>
+    <h1>Loading...</h1>
+</ng-template>

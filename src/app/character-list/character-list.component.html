@@ -1,0 +1,11 @@
+<div class="h2 text-center" [ngStyle]="{'font-style': 'italic'}">Characters List</div>
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-3">
+            <div class="col" *ngFor="let char of characters">
+                <app-character [character]="char"></app-character>
+            </div>
+        </div>
+    </div>
+</div>
+
